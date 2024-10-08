@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e8b57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+  }
+  
+  .carta-slot {
+    width: 10vw;
+    height: 16vh;
+    background-color: #ecf0f1;
+    border: 2px solid #95a5a6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    color: #7f8c8d;
+  }
+  .mao {
+    width: 80vw;
+    border: 6px solid #95a5a6;
+  }
+  
+  .campo-card {
+    width: 60vw;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .carta {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    border: 2px solid #95a5a6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #7f8c8d;
+  }
+  
+  .menu-lateral-esquerda {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Inicialmente fora da tela */
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.3s;
+  }
+  
+  .menu-lateral-esquerda.ativo {
+    left: 0; /* Quando ativo, o menu aparece */
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .sidebar button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar button:hover {
+    background-color: #888;
+  }
+  
+  /* Quando o menu está aberto, ele ocupa 300px de largura */
+  .sidebar.active {
+    width: 300px;
+  }
+  
+  /* Estilos para as cartas dentro do sidebar */
+  #cemiterioCartas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .menuLateralDireita {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+  }
+  .menuLateralDireita button:hover {
+    background-color: #888;
+  }
+  
+  /* Quando o menu está aberto, ele ocupa 300px de largura */
+  .menuLateralDireita.ativo {
+    width: 300px;
+  }
+  
+  /* Estilos para as cartas dentro do sidebar */
+  #selecionarcartas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
