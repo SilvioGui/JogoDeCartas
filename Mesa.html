@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Cartas</title>
+
+    <!-- Link do CSS externo -->
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <!-------- LOGIN -------->
+    <div class="entrarSalaBtn">Entrar</div>
+    <div class="criarSalaBtn">Criar</div>
+
+    <!-------- CAMPO -------->
+    <div class="campo">
+      <!-- Mão do Jogador -->
+      <div class="mao carta-slot"></div>
+
+      <!-- Linha do campo inferior do oponente -->
+      <div class="row">
+        <div class="carta-slot"></div>
+        <div class="campo-card carta-slot" id="campo_inferior_oponente"></div>
+        <div class="carta-slot"></div>
+      </div>
+
+      <!-- Linha do campo superior do oponente -->
+      <div class="row">
+        <div class="carta-slot"></div>
+        <div class="campo-card carta-slot" id="campo_superior_oponente"></div>
+        <div class="carta-slot"></div>
+      </div>
+
+      <br />
+
+      <!-- Linha do campo superior do jogador -->
+      <div class="row">
+        <div class="carta-slot"></div>
+        <div class="campo-card carta-slot zona-drop" id="campo_superior"></div>
+        <div class="carta-slot zona-drop" id="cemiterio_jogador"></div>
+      </div>
+
+      <!-- Linha do campo inferior do jogador -->
+      <div class="row">
+        <div class="carta-slot"></div>
+        <div class="campo-card carta-slot zona-drop" id="campo_inferior"></div>
+        <div class="carta-slot">
+          <button id="sacarBtn">Puxar Carta</button>
+        </div>
+      </div>
+
+      <!-- Mão do Jogador -->
+      <div class="mao carta-slot zona-drop" id="mao"></div>
+
+      <!-------- MENU LATERAL ESQUERDO -------->
+      <div class="menu-lateral-esquerda" id="menu-lateral-esquerda">
+        <h3>Informações da Carta</h3>
+        <p id="nome-carta">Nome: [Nome da Carta]</p>
+        <p id="ataque-carta">Ataque: [Ataque]</p>
+        <p id="defesa-carta">Defesa: [Defesa]</p>
+        <p id="tipo-carta">Tipo: [Tipo]</p>
+        <button id="fechar-menu-esquerda">Fechar</button>
+      </div>
+
+      <!-------- MENU LATERAL DIREITO -------->
+      <div id="menuLateralDireita" class="menuLateralDireita">
+        <div id="cemiterioCartas"></div>
+        <div id="card-selection" class="card-selection"></div>
+        <button id="draw_button_fechar">Fechar</button>
+        <div id="selected-card" class="selected-card"></div>
+      </div>
+
+      <h2>Escolha uma Carta</h2>
+      <button id="draw_button">Puxar Carta</button>
+      <button id="extra_deck">Extra Deck</button>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="src/conexao.js"></script>
+    <script src="src/controler.js"></script>
+  </body>
+</html>
